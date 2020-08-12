@@ -7,6 +7,9 @@
         <div class="movie-details">
             <div class="col-a">
                 <img src="{{movieDetails.Poster}}" />
+                <p *ngIf="movieDetails.Poster">
+                    <a href="https://in.bookmyshow.com/" target="_blank">Book Ticket</a>
+                </p>
             </div>  
             <div class="col-b">
                 <ul class="movie-summary">
