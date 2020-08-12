@@ -1,0 +1,27 @@
+.movie-list{
+    margin: 0;
+    padding:0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.movie-list > li{
+    box-sizing: border-box;
+    margin: 0 10px 20px 10px;
+    padding:10px;
+    box-shadow: 0 1px 4px #999999;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 321px;
+}
+.poster{height: 450px; overflow: hidden; width: 300px; background-color: #efefef; cursor: pointer;}
+.details{padding: 5px;}
+.details p{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 10px 0 0 0;
+}
+.details p strong{width: 55px;text-align: left;}
+.details p label{width: calc(100% - 55px);}

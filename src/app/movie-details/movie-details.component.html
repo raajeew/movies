@@ -1,0 +1,28 @@
+<div class="main-wrap">
+    <h3>{{pageTitle}}</h3>
+    <span class="loading">{{userMessage}}</span>
+    
+    <div class="mainBody">
+        
+        <div class="movie-details">
+            <div class="col-a">
+                <img src="{{movieDetails.Poster}}" />
+            </div>  
+            <div class="col-b">
+                <ul class="movie-summary">
+                    <li *ngFor="let item of movieDetails | keyvalue">
+                        <label>{{item.key}}&nbsp;:</label>
+                        <span *ngIf="item.key !== 'Ratings'" style="word-break: break-word;">{{item.value}}</span>
+                        <span *ngIf="item.key == 'Ratings'">
+                            <span *ngFor="let rating of item.value">
+                                <em>{{rating.Source}} &nbsp;:&nbsp;</em>
+                                <strong>{{rating.Value}}</strong><br/>
+                            </span>
+                        </span>
+                    </li>
+                </ul> 
+            </div> 
+        </div>
+
+    </div>
+</div>

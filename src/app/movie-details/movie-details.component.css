@@ -1,0 +1,23 @@
+.movie-details{
+    display: flex;
+    flex-direction: row;
+}
+.movie-details .col-a{
+    width: 350px;
+}
+
+.movie-details .col-b{
+    width: calc(100% - 350px);
+}
+.movie-summary{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.movie-summary li{
+    display: flex;
+}
+.movie-summary li label{
+    font-weight: bold;
+    padding-right: 10px;
+}
