@@ -1,6 +1,9 @@
 <div class="main-wrap">
     <h3>Movies List</h3>
     <div> 
+          <div class="search-box">
+            <input (keyup)="applyFilter($event)" placeholder="Search movies by any keyword" #input>
+          </div>
           <div class="mat-elevation-z2">
             <table mat-table [dataSource]="dataSource" matSort width="100%">          
               <ng-container matColumnDef="title">
