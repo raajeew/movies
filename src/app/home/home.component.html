@@ -5,7 +5,7 @@
         <ul class="movie-list">
             <li *ngFor="let movie of moviesList; let i = index">
                 <div class="poster" (click)="showMovieDetails(i, movie.Title)">
-                    <img title="{{movie.Title}}" alt="{{movie.Title}}" src="{{movie.Poster}}" height="450px"/>
+                    <img title="{{movie.Title}}" alt="{{movie.Title}}" src="{{movie.Poster}}"/>
                 </div>
                 <div class="details">
                     <p>

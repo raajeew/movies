@@ -16,7 +16,8 @@
     overflow: hidden;
     width: 321px;
 }
-.poster{height: 450px; overflow: hidden; width: 300px; background-color: #efefef; cursor: pointer;}
+.poster{height: 450px; overflow: hidden; background-color: #efefef; cursor: pointer;}
+.poster img{width: 100%;}
 .details{padding: 5px;}
 .details p{
     display: flex;
@@ -26,3 +27,39 @@
 }
 .details p strong{width: 55px;text-align: left;font-weight: 500;}
 .details p label{width: calc(100% - 55px);}
+
+@media only screen and (max-width: 900px) {
+    .main-wrap{
+        margin: 20px 10px !important;
+     }
+    .movie-list > li{
+        width: 230px;
+    }
+    .movie-list > li .poster{
+        height: 280px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .main-wrap{
+        margin: 20px 10px !important;
+     }
+    .movie-list > li{
+        width: 250px;
+        margin: 5px;
+    }
+    .movie-list > li .poster{
+        height: 280px;
+    }
+}
+@media only screen and (max-width: 599px) {
+    .main-wrap{
+        margin: 20px 10px !important;
+     }
+    .movie-list > li{
+        width: 400px;
+        margin: 5px;
+    }
+    .movie-list > li .poster{
+        height: 480px;
+    }
+}

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { movies } from '../data/movies'
+import { actors } from '../data/actors'
 @Injectable({
   providedIn: 'root'
 })
@@ -15,7 +16,7 @@ export class DataService {
           }else{
             reject("Something went wrong! Please try again later.");
           }
-        },300)
+        },500)
       })
   }
 
@@ -27,8 +28,20 @@ export class DataService {
         }else{
           reject("Something went wrong! Please try again later.");
         }
-      },500)
+      },10)
     })
   }
+
+  getActors(){
+    return new Promise((resolve, reject)=>{
+      setTimeout(()=>{
+        if(actors.length > 0){
+          resolve(actors);
+        }else{
+          reject("Something went wrong! Please try again later.");
+        }
+      },500)
+    })
+}
 
 }
