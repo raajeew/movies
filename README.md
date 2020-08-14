@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Localhost Setup
 
-Checkout the project - `git clone https://github.com/raajeew/movies.git`
+Checkout the project - `git clone https://github.com/raajeew/movies.git`  
 Go to `movies` directories  
 Run `npm install`  
 Run `npm start`  
