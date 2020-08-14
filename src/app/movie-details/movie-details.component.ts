@@ -19,9 +19,12 @@ export class MovieDetailsComponent implements OnInit {
     this.userMessage = "Loading..."
     this.activatedRoute.queryParams.subscribe(params => {
         this.pageTitle = params.title;
-        this.ds.getMoviesById(params.id).then((response)=>{
+        this.ds.getMoviesByTitle(this.pageTitle).then((response)=>{
           this.movieDetails = response;
           this.userMessage="";
+        })
+        .catch((err)=>{
+          this.userMessage = err;
         });
      })
   }

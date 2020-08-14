@@ -4,14 +4,14 @@
     <div class="mainBody">
         <ul class="movie-list">
             <li *ngFor="let movie of moviesList; let i = index">
-                <div class="poster" (click)="showMovieDetails(i, movie.Title)">
+                <div class="poster" (click)="showMovieDetails(movie.Title)">
                     <img title="{{movie.Title}}" alt="{{movie.Title}}" src="{{movie.Poster}}"/>
                 </div>
                 <div class="details">
                     <p>
                         <strong>Title :</strong>
                         <label>
-                            <a class="link" (click)="showMovieDetails(i, movie.Title)">{{movie.Title}}</a>
+                            <a class="link" (click)="showMovieDetails(movie.Title)">{{movie.Title}}</a>
                             ({{movie.Year}})
                         </label>
                     </p>                    

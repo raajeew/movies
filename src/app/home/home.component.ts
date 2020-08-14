@@ -27,9 +27,9 @@ export class HomeComponent implements OnInit {
       })
   }
 
-  showMovieDetails(index:number,name:any){
+  showMovieDetails(name:any){
     this.router.navigate(['movie-details'], {
-      queryParams: {'id':index, 'title':name}
+      queryParams: {'title':name}
     });
   }
   ngOnInit(): void {

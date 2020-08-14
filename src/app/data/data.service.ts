@@ -20,15 +20,26 @@ export class DataService {
       })
   }
 
-  getMoviesById(id:any){
+  getMoviesByTitle(title:any){
+    console.log(title);
     return new Promise((resolve, reject)=>{
-      setTimeout(()=>{
-        if(movies.length > 0){
-          resolve(movies[id]);
-        }else{
-          reject("Something went wrong! Please try again later.");
+     let resultFound =  movies.find((item, index)=>{
+        if(movies[index].Title == title){
+          return item;
         }
-      },10)
+      })
+      if(resultFound){
+        resolve(resultFound);
+      }else{
+        reject("Something went wrong! Please try again later.");
+      }
+      // setTimeout(()=>{
+      //   if(movies.length > 0){
+      //     resolve(movies[id]);
+      //   }else{
+      //     reject("Something went wrong! Please try again later.");
+      //   }
+      // },10)
     })
   }
 

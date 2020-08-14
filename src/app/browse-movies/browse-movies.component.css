@@ -5,10 +5,21 @@
     height: 20px;
     width: 20px;
     margin-right: 10px;
+    cursor: pointer;
 }
 .mat-tree-node button .mat-icon{display: none;}
 .mat-tree{background-color: transparent;}
 .mainBody{
     padding: 20px 30px;
     background-color: #ffffff;
+}
+.mat-tree-node[aria-expanded="false"] button{
+    background: url(../../assets/add-24px.svg) no-repeat center center;
+}
+.mat-tree-node[aria-expanded="true"] button{
+    background: url(../../assets/remove-24px.svg) no-repeat center center;
+}
+.mat-tree-node[aria-expanded="false"] button[disabled]{
+    background:none;
+    cursor: default;
 }

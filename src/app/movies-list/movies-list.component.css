@@ -8,3 +8,10 @@
     outline: none;
 }
 .search-box input:focus{border:1px solid #5fa7d1;}
+
+/* Responsive CSS */
+@media only screen and (max-width: 900px) {
+    .main-wrap{
+       margin: 20px 10px !important;
+    }
+  }

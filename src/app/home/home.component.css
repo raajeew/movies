@@ -8,15 +8,15 @@
 }
 .movie-list > li{
     box-sizing: border-box;
-    margin: 0 30px 30px 0px;
     padding:10px;
     box-shadow: 0 1px 4px #999999;
     background-color: #ffffff;
     border-radius: 5px;
     overflow: hidden;
-    width: 321px;
+    margin: 0.5%;
+    width: 19%;
 }
-.poster{height: 450px; overflow: hidden; background-color: #efefef; cursor: pointer;}
+.poster{overflow: hidden; background-color: #ffffff; cursor: pointer;}
 .poster img{width: 100%;}
 .details{padding: 5px;}
 .details p{
