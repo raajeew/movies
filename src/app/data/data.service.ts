@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { movies } from '../data/movies'
 import { actors } from '../data/actors'
+import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   getMovies(){
       return new Promise((resolve, reject)=>{
@@ -16,12 +17,11 @@ export class DataService {
           }else{
             reject("Something went wrong! Please try again later.");
           }
-        },500)
+        },0)
       })
   }
 
   getMoviesByTitle(title:any){
-    console.log(title);
     return new Promise((resolve, reject)=>{
      let resultFound =  movies.find((item, index)=>{
         if(movies[index].Title == title){
@@ -33,13 +33,6 @@ export class DataService {
       }else{
         reject("Something went wrong! Please try again later.");
       }
-      // setTimeout(()=>{
-      //   if(movies.length > 0){
-      //     resolve(movies[id]);
-      //   }else{
-      //     reject("Something went wrong! Please try again later.");
-      //   }
-      // },10)
     })
   }
 
@@ -51,8 +44,15 @@ export class DataService {
         }else{
           reject("Something went wrong! Please try again later.");
         }
-      },500)
+      },0)
     })
-}
+  }
+
+  // search movies online by title
+  searchMovies(title:any){
+    let searchUrl:any = "http://www.omdbapi.com/?s="+title+"&apikey=cf68b94e";
+    return this.http.get(searchUrl);
+  }
+
 
 }

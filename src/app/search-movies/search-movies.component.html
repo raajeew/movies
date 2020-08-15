@@ -1,0 +1,34 @@
+<div class="main-wrap">
+    <h3>Search Movies by title</h3>
+    <span class="loading">{{userMessage}}</span>
+    
+    <div class="mainBody">
+        <div class="search-box">
+            <input (keydown)="onEnter($event)" placeholder="Search movies by title" [(ngModel)]="movieTitle">
+            <button (click)="search()">Search Movies</button>
+
+        </div>
+        <div class="search-results">
+            <ul class="movie-list">
+                <li *ngFor="let movie of movies; let i = index">
+                    <div class="poster">
+                        <img title="{{movie.Title}}" alt="{{movie.Title}}" src="{{movie.Poster}}"/>
+                    </div>
+                    <div class="details">
+                        <p>
+                            <strong>Title :</strong>
+                            <label>
+                                <a>{{movie.Title}}</a>
+                                ({{movie.Year}})
+                            </label>
+                        </p>                    
+                        <p>
+                            <strong>Type :</strong>
+                            <label>{{ movie.Type }}</label>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>        

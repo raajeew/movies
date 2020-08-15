@@ -6,6 +6,7 @@ const routes: Routes = [
  { path: 'movies-list', loadChildren: () => import('./movies-list/movies-list.module').then(m => m.MoviesListModule) },
  { path: 'movie-details', loadChildren: () => import('./movie-details/movie-details.module').then(m => m.MovieDetailsModule) }, 
  { path: 'browse-movies', loadChildren: () => import('./browse-movies/browse-movies.module').then(m => m.BrowseMoviesModule) },
+ { path: 'search-movies', loadChildren: () => import('./search-movies/search-movies.module').then(m => m.SearchMoviesModule) },
  { path: '', pathMatch: 'full', redirectTo: 'home'},
  { path: '**', loadChildren: () => import('./page-not-found/page-not-found.module').then(m => m.PageNotFoundModule) },
 ];
