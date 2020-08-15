@@ -3,13 +3,18 @@
     <span class="loading">{{userMessage}}</span>
     
     <div class="mainBody">
-        
         <div class="movie-details">
-            <div class="col-a">
-                <img src="{{movieDetails.Poster}}" width="100%" />
-                <p *ngIf="movieDetails.Poster">
-                    <a href="https://in.bookmyshow.com/" target="_blank">Book Ticket</a>
-                </p>
+            <div class="col-a banner">
+                <div class="poster"><img src="{{movieDetails.Poster}}" height="200px" /></div>
+                <div class="details">
+                    <h2>{{ movieDetails.Title }}</h2>
+                    <p><strong>Cast: </strong> {{ movieDetails.Actors }}</p>
+                    <p><strong>Director: </strong>{{ movieDetails.Director }}</p>
+                    <p><strong>Year of release: </strong>{{ movieDetails.Year }}</p>
+                    <p *ngIf="movieDetails.Poster">
+                        <a href="https://in.bookmyshow.com/" target="_blank">Book Ticket</a>
+                    </p>
+                </div>
             </div>  
             <div class="col-b">
                 <ul class="movie-summary">

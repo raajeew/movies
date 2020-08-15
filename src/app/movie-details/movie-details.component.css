@@ -1,22 +1,29 @@
 .movie-details{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 .movie-details .col-a{
-    width: 350px;
-    background-color: #ffffff;
-    text-align: center;
+    width: 100%;
+    background-image: linear-gradient(to right, rgb(154, 158, 102), rgb(182, 187, 111));
     box-sizing: border-box;
     padding:22px;
-    min-height: 50vh;
+    min-height: 200px;
+    display: flex;
 }
 
 .movie-details .col-b{
-    width: calc(100% - 350px);
+    width: calc(100%);
     box-sizing: border-box;
-    margin-left: 30px;
     padding:20px 23px;
     background-color: #ffffff;
+}
+.banner .poster{
+    width: 200px;
+    text-align: left;
+}
+.banner .poster img{display: inline-block; border: 5px solid #ffffff;}
+.banner .details{
+    color: #111111;
 }
 .movie-summary{
     list-style: none;
